@@ -23,5 +23,11 @@ pipeline {
             }
         }
     }
-    
+     post {
+        always {
+                // Handling of post-build actions to validate success and failure
+           emailext body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'shruthihebbare2529@gmail.com'
+            }
+        }
+
 }
